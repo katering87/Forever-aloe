@@ -1,4 +1,72 @@
-function changeLanguage(lang) {
-    alert("Выбран язык: " + lang);
-    // Тут можно добавить изменение языка на сайте
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 Шапка */
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #1b5e20;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 🔹 Категории */
+.category-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    width: 200px;
+    margin: 15px;
+    text-align: center;
+}
+
+.category-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* 🔹 Кнопка скидки */
+.discount {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.discount-button {
+    display: inline-block;
+    background-color: #ff9800;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
 }
