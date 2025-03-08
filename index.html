@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Forever Wellness Hub - Официальный дистрибьютор продукции Forever Living">
     <title>Forever Wellness Hub</title>
-    
+
     <!-- Подключение стилей -->
-    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="styles/style.min.css">
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LF02RB8NPX"></script>
@@ -23,77 +23,65 @@
 </head>
 <body>
 
-    <!-- 🔹 Шапка сайта -->
+    <!-- 🔹 Верхняя панель -->
     <header>
         <div class="top-bar">
-            <div class="location">
-                🌍 <span>Slovakia</span>
-            </div>
-            <div class="language-switcher">
-                <button onclick="changeLanguage('sk')">🇸🇰 Slovenský</button>
-                <button onclick="changeLanguage('ua')">🇺🇦 Українська</button>
-                <button onclick="changeLanguage('ru')">🇷🇺 Русский</button>
-                <button onclick="changeLanguage('de')">🇩🇪 Deutsch</button>
-                <button onclick="changeLanguage('en')">🇬🇧 English</button>
+            <div class="language-container">
+                <button id="language-btn" onclick="toggleLanguageMenu()">🌍 Slovak</button>
+                <div id="language-menu">
+                    <input type="text" id="language-search" placeholder="🔎 Найти язык..." onkeyup="filterLanguages()">
+                    <ul id="language-list">
+                        <li onclick="changeLanguage('sk')">🇸🇰 Slovenský</li>
+                        <li onclick="changeLanguage('ua')">🇺🇦 Українська</li>
+                        <li onclick="changeLanguage('ru')">🇷🇺 Русский</li>
+                        <li onclick="changeLanguage('de')">🇩🇪 Deutsch</li>
+                        <li onclick="changeLanguage('en')">🇬🇧 English</li>
+                        <li onclick="changeLanguage('fr')">🇫🇷 Français</li>
+                        <li onclick="changeLanguage('es')">🇪🇸 Español</li>
+                        <li onclick="changeLanguage('it')">🇮🇹 Italiano</li>
+                    </ul>
+                </div>
             </div>
             <div class="user-menu">
-                <span>🔧 Привет, Катерина</span>
-                <a href="#"><img src="cart-icon.png" alt="Корзина"> (0)</a>
+                <a href="cart.html"><img src="assets/cart.png" alt="Корзина"> (<span id="cart-count">0</span>)</a>
+                <a href="profile.html">👤 Привет, Катерина</a>
             </div>
         </div>
+        
+        <!-- 🔹 Логотип -->
         <div class="logo">
-            <h1>FOREVER WELLNESS HUB</h1>
+            <img src="assets/forever-logo.png" alt="Forever">
         </div>
+
+        <!-- 🔹 Навигация -->
         <nav>
             <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">Продукция</a></li>
-                <li><a href="#">Акции</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="index.html">🏠 Главная</a></li>
+                <li><a href="products.html">🛍 Продукция</a></li>
+                <li><a href="offers.html">🔥 Акции</a></li>
+                <li><a href="about.html">ℹ️ О компании</a></li>
+                <li><a href="contact.html">📞 Контакты</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 🔹 Основной контент -->
-    <main>
-        <section class="categories">
-            <h2>Категории товаров</h2>
-            <div class="category-grid">
-                <div class="category-item">
-                    <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=SVK&language=en&categoryName=ForeverFITR&distribID=421007060065">
-                        <img src="fit.jpg" alt="Программа FIT">
-                        <span>Программа FIT</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=SVK&language=en&categoryName=DrinksR&distribID=421007060065">
-                        <img src="drinks.jpg" alt="Напитки">
-                        <span>Напитки</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=SVK&language=en&categoryName=NutritionR&distribID=421007060065">
-                        <img src="supplements.jpg" alt="Добавки">
-                        <span>Добавки</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=SVK&language=en&categoryName=BeeProductsR&distribID=421007060065">
-                        <img src="bee.jpg" alt="Продукты пчеловодства">
-                        <span>Продукты пчеловодства</span>
-                    </a>
-                </div>
-            </div>
-        </section>
+    <!-- 🔹 Категории товаров -->
+    <section class="categories">
+        <h2>Категории продуктов</h2>
+        <div class="category-grid">
+            <a href="fit.html" class="category-item"><img src="assets/fit.jpg" alt="Программа FIT"><span>Программа FIT</span></a>
+            <a href="drinks.html" class="category-item"><img src="assets/drinks.jpg" alt="Напитки"><span>Напитки</span></a>
+            <a href="supplements.html" class="category-item"><img src="assets/supplements.jpg" alt="Добавки"><span>Добавки</span></a>
+            <a href="bee.html" class="category-item"><img src="assets/bee.jpg" alt="Продукты пчеловодства"><span>Продукты пчеловодства</span></a>
+        </div>
+    </section>
 
-        <!-- 🔹 Кнопка "Хочу скидку 30%" -->
-        <section class="discount">
-            <a href="https://shop.foreverliving.com/mobile/join.do?store=SVK&langID=en&distribID=421007060065&menuoff=n" class="discount-button">
-                Я хочу скидку 30%
-            </a>
-        </section>
-    </main>
+    <!-- 🔹 Кнопка скидки -->
+    <section class="discount">
+        <a href="https://shop.foreverliving.com/mobile/join.do?store=SVK&langID=en&distribID=421007060065&menuoff=n" class="discount-button">
+            Я хочу скидку 30%
+        </a>
+    </section>
 
     <!-- 🔹 Футер -->
     <footer>
@@ -101,6 +89,6 @@
     </footer>
 
     <!-- Подключение скриптов -->
-    <script src="script.min.js"></script>
+    <script src="scripts/script.min.js"></script>
 </body>
 </html>
