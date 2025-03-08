@@ -3,92 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Forever Wellness Hub - Официальный дистрибьютор продукции Forever Living">
+    <meta name="description" content="Forever Wellness Hub - здоровье и красота">
     <title>Forever Wellness Hub</title>
-
-    <!-- Подключение стилей -->
-    <link rel="stylesheet" href="styles/style.min.css">
-
-    <!-- Favicon -->
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LF02RB8NPX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-LF02RB8NPX');
-    </script>
+    <link rel="stylesheet" href="style.min.css">
+    <script src="script.min.js" defer></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
-    <!-- 🔹 Верхняя панель -->
     <header>
-        <div class="top-bar">
-            <div class="language-container">
-                <button id="language-btn" onclick="toggleLanguageMenu()">🌍 Slovak</button>
-                <div id="language-menu">
-                    <input type="text" id="language-search" placeholder="🔎 Найти язык..." onkeyup="filterLanguages()">
-                    <ul id="language-list">
-                        <li onclick="changeLanguage('sk')">🇸🇰 Slovenský</li>
-                        <li onclick="changeLanguage('ua')">🇺🇦 Українська</li>
-                        <li onclick="changeLanguage('ru')">🇷🇺 Русский</li>
-                        <li onclick="changeLanguage('de')">🇩🇪 Deutsch</li>
-                        <li onclick="changeLanguage('en')">🇬🇧 English</li>
-                        <li onclick="changeLanguage('fr')">🇫🇷 Français</li>
-                        <li onclick="changeLanguage('es')">🇪🇸 Español</li>
-                        <li onclick="changeLanguage('it')">🇮🇹 Italiano</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="user-menu">
-                <a href="cart.html"><img src="assets/cart.png" alt="Корзина"> (<span id="cart-count">0</span>)</a>
-                <a href="profile.html">👤 Привет, Катерина</a>
-            </div>
-        </div>
-        
-        <!-- 🔹 Логотип -->
-        <div class="logo">
-            <img src="assets/forever-logo.png" alt="Forever">
-        </div>
-
-        <!-- 🔹 Навигация -->
+        <div class="logo">FOREVER</div>
         <nav>
             <ul>
-                <li><a href="index.html">🏠 Главная</a></li>
-                <li><a href="products.html">🛍 Продукция</a></li>
-                <li><a href="offers.html">🔥 Акции</a></li>
-                <li><a href="about.html">ℹ️ О компании</a></li>
-                <li><a href="contact.html">📞 Контакты</a></li>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Продукция</a></li>
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Корзина 🛒</a></li>
+                <li><a href="#">Профиль 👤</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 🔹 Категории товаров -->
-    <section class="categories">
+    <section class="language-selector">
+        <label for="language">🌎 Выбрать язык:</label>
+        <select id="language">
+            <option value="sk">Словацкий</option>
+            <option value="ua">Украинский</option>
+            <option value="ru">Русский</option>
+            <option value="de">Немецкий</option>
+            <option value="en">Английский</option>
+        </select>
+    </section>
+
+    <section class="products">
         <h2>Категории продуктов</h2>
-        <div class="category-grid">
-            <a href="fit.html" class="category-item"><img src="assets/fit.jpg" alt="Программа FIT"><span>Программа FIT</span></a>
-            <a href="drinks.html" class="category-item"><img src="assets/drinks.jpg" alt="Напитки"><span>Напитки</span></a>
-            <a href="supplements.html" class="category-item"><img src="assets/supplements.jpg" alt="Добавки"><span>Добавки</span></a>
-            <a href="bee.html" class="category-item"><img src="assets/bee.jpg" alt="Продукты пчеловодства"><span>Продукты пчеловодства</span></a>
+        <div class="product-grid">
+            <a href="#" class="product-item">💪 Программа FIT</a>
+            <a href="#" class="product-item">🍹 Напитки</a>
+            <a href="#" class="product-item">🔬 Добавки</a>
+            <a href="#" class="product-item">🐝 Продукция пчеловодства</a>
         </div>
+        <button class="discount-button">Я хочу скидку 30%</button>
     </section>
 
-    <!-- 🔹 Кнопка скидки -->
-    <section class="discount">
-        <a href="https://shop.foreverliving.com/mobile/join.do?store=SVK&langID=en&distribID=421007060065&menuoff=n" class="discount-button">
-            Я хочу скидку 30%
-        </a>
-    </section>
-
-    <!-- 🔹 Футер -->
     <footer>
-        <p>&copy; 2025 Forever Wellness Hub. Все права защищены.</p>
+        <p>© 2025 Forever Wellness Hub. Все права защищены.</p>
     </footer>
-
-    <!-- Подключение скриптов -->
-    <script src="scripts/script.min.js"></script>
 </body>
 </html>
