@@ -1,68 +1,79 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
+    background-color: #fff;
+    color: #000;
     margin: 0;
     padding: 0;
 }
 
-/* 🔹 Шапка */
 header {
-    background-color: #2e7d32;
+    background: black;
     color: white;
     padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.language-selector {
+    padding: 20px;
     text-align: center;
 }
 
-.top-bar {
+.products {
+    text-align: center;
+    padding: 20px;
+}
+
+.product-grid {
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #1b5e20;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* 🔹 Меню языков */
-.language-container {
-    position: relative;
+.product-item {
+    padding: 10px 20px;
+    background: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-#language-menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ddd;
-    width: 200px;
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-#language-search {
-    width: 90%;
-    margin: 5px;
-    padding: 5px;
-}
-
-#language-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#language-list li {
-    padding: 10px;
+.discount-button {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 16px;
+    background: orange;
+    color: white;
+    border: none;
     cursor: pointer;
 }
 
-#language-list li:hover {
-    background-color: #ddd;
-}
-
-/* 🔹 Кнопка скидки */
-.discount-button {
-    display: inline-block;
-    background-color: #ff9800;
+footer {
+    background: black;
     color: white;
-    padding: 15px 25px;
-    font-size: 18px;
-    text-decoration: none;
-    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
