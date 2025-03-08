@@ -20,47 +20,43 @@ header {
     background-color: #1b5e20;
 }
 
-nav ul {
+/* 🔹 Меню языков */
+.language-container {
+    position: relative;
+}
+
+#language-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#language-search {
+    width: 90%;
+    margin: 5px;
+    padding: 5px;
+}
+
+#language-list {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
+    margin: 0;
 }
 
-nav ul li {
-    margin: 0 15px;
+#language-list li {
+    padding: 10px;
+    cursor: pointer;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* 🔹 Категории */
-.category-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.category-item {
-    width: 200px;
-    margin: 15px;
-    text-align: center;
-}
-
-.category-item img {
-    width: 100%;
-    border-radius: 10px;
+#language-list li:hover {
+    background-color: #ddd;
 }
 
 /* 🔹 Кнопка скидки */
-.discount {
-    text-align: center;
-    margin: 30px 0;
-}
-
 .discount-button {
     display: inline-block;
     background-color: #ff9800;
