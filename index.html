@@ -9,9 +9,13 @@
 </head>
 <body>
 
-    <!-- Шапка -->
+    <!-- Верхнее меню -->
     <header>
-        <div class="logo">Forever</div>
+        <div class="logo">FOREVER</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Поиск товаров...">
+            <button>🔍</button>
+        </div>
         <div class="menu">
             <div class="language">
                 <span>🌍</span>
@@ -23,12 +27,8 @@
                     <option value="ua">Українська</option>
                 </select>
             </div>
-            <div class="profile-icon" onclick="toggleProfile()">
-                👤 Профиль
-            </div>
-            <div class="cart-icon" onclick="toggleCart()">
-                🛒 Корзина <span id="cart-count">0</span>
-            </div>
+            <div class="profile-icon" onclick="toggleProfile()">👤</div>
+            <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
         </div>
     </header>
 
@@ -73,6 +73,11 @@
             <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=SVK&language=en&categoryName=NutritionR&distribID=421007060065" class="category">
                 <img src="images/supplements.jpg" alt="Supplements">
                 <span>Добавки</span>
+            </a>
+
+            <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=SVK&language=en&categoryName=BeeProductsR&distribID=421007060065" class="category">
+                <img src="images/bee.jpg" alt="Bee Products">
+                <span>Продукция пчеловодства</span>
             </a>
         </div>
     </div>
