@@ -5,12 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forever Wellness Hub</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
+    <!-- Шапка -->
+    <header>
+        <div class="logo">Forever</div>
+        <div class="menu">
+            <div class="language">
+                <span>🌍</span>
+                <select id="language-select">
+                    <option value="ru">Русский</option>
+                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                    <option value="sk">Slovenský</option>
+                    <option value="ua">Українська</option>
+                </select>
+            </div>
+            <div class="profile-icon" onclick="toggleProfile()">
+                👤 Профиль
+            </div>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 Корзина <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Окно профиля -->
+    <div id="profile-popup" class="popup">
+        <h2>Ваш профиль</h2>
+        <p><strong>Email:</strong> user@example.com</p>
+        <h3>Последние покупки</h3>
+        <ul id="recent-orders">
+            <li>Нет покупок</li>
+        </ul>
+        <h3>Адреса доставки</h3>
+        <ul id="addresses">
+            <li>Братислава, Амброва 37</li>
+        </ul>
+        <button onclick="closePopup('profile-popup')">Закрыть</button>
+    </div>
+
+    <!-- Окно корзины -->
+    <div id="cart-popup" class="popup">
+        <h2>Корзина</h2>
+        <ul id="cart-items">
+            <li>Корзина пуста</li>
+        </ul>
+        <button onclick="closePopup('cart-popup')">Закрыть</button>
+    </div>
+
+    <!-- Категории товаров -->
     <div class="container">
         <h1 class="title">Категории продуктов</h1>
-
         <div class="categories">
             <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=SVK&language=en&categoryName=ForeverFITR&distribID=421007060065" class="category">
                 <img src="images/fit.jpg" alt="FIT Program">
@@ -26,37 +74,12 @@
                 <img src="images/supplements.jpg" alt="Supplements">
                 <span>Добавки</span>
             </a>
-
-            <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=SVK&language=en&categoryName=BeeProductsR&distribID=421007060065" class="category">
-                <img src="images/bee.jpg" alt="Bee Products">
-                <span>Продукция пчеловодства</span>
-            </a>
-
-            <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=SVK&language=en&categoryName=WeightManagmentR&distribID=421007060065" class="category">
-                <img src="images/weight.jpg" alt="Weight Management">
-                <span>Контроль веса</span>
-            </a>
-
-            <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=SVK&language=en&categoryName=PersonalCareR&distribID=421007060065" class="category">
-                <img src="images/personalcare.jpg" alt="Personal Care">
-                <span>Личная гигиена</span>
-            </a>
-
-            <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=SVK&language=en&categoryName=SkinCareR&distribID=421007060065" class="category">
-                <img src="images/skincare.jpg" alt="Skin Care">
-                <span>Уход за кожей</span>
-            </a>
-
-            <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=SVK&language=en&categoryName=SonyaSkinR&distribID=421007060065" class="category">
-                <img src="images/sonya.jpg" alt="Sonya Skin Care">
-                <span>Sonya</span>
-            </a>
-
-            <a href="https://shop.foreverliving.com/retail/entry/Shop.do?store=SVK&language=en&categoryName=CombosR&distribID=421007060065" class="category">
-                <img src="images/sets.jpg" alt="Sets">
-                <span>Наборы</span>
-            </a>
         </div>
+    </div>
+
+    <!-- Кнопка скидки -->
+    <div class="discount">
+        <button onclick="getDiscount()">🔥 Хочу 30% скидку!</button>
     </div>
 
 </body>
