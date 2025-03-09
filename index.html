@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Forever Wellness Hub - здоровье и красота">
     <title>Forever Wellness Hub</title>
-    <link rel="stylesheet" href="style.min.css">
-    <script src="script.min.js" defer></script>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.min.css">
+    <script src="scripts/script.min.js" defer></script>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="logo">FOREVER</div>
         <nav>
             <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Продукция</a></li>
-                <li><a href="#">Акции</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Корзина 🛒</a></li>
-                <li><a href="#">Профиль 👤</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="products.html">Продукция</a></li>
+                <li><a href="cart.html">Корзина 🛒</a></li>
+                <li><a href="profile.html">Профиль 👤</a></li>
             </ul>
         </nav>
     </header>
@@ -38,10 +36,10 @@
     <section class="products">
         <h2>Категории продуктов</h2>
         <div class="product-grid">
-            <a href="#" class="product-item">💪 Программа FIT</a>
-            <a href="#" class="product-item">🍹 Напитки</a>
-            <a href="#" class="product-item">🔬 Добавки</a>
-            <a href="#" class="product-item">🐝 Продукция пчеловодства</a>
+            <a href="products.html?category=fit" class="product-item">💪 Программа FIT</a>
+            <a href="products.html?category=drinks" class="product-item">🍹 Напитки</a>
+            <a href="products.html?category=supplements" class="product-item">🔬 Добавки</a>
+            <a href="products.html?category=bee" class="product-item">🐝 Продукция пчеловодства</a>
         </div>
         <button class="discount-button">Я хочу скидку 30%</button>
     </section>
