@@ -1,79 +1,51 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #000;
-    margin: 0;
-    padding: 0;
+    background-color: #ffffff;
+    text-align: center;
 }
 
-header {
-    background: black;
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
+.title {
+    font-size: 28px;
     font-weight: bold;
+    margin-top: 20px;
 }
 
-nav ul {
-    list-style: none;
+.categories {
     display: flex;
-    gap: 15px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.language-selector {
-    padding: 20px;
-    text-align: center;
-}
-
-.products {
-    text-align: center;
-    padding: 20px;
-}
-
-.product-grid {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.product-item {
-    padding: 10px 20px;
-    background: #000;
-    color: white;
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
-    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.discount-button {
-    margin-top: 20px;
-    padding: 15px;
-    font-size: 16px;
-    background: orange;
-    color: white;
-    border: none;
-    cursor: pointer;
+.category img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-footer {
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+.category span {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.category:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.category:hover img {
+    transform: scale(1.1);
 }
